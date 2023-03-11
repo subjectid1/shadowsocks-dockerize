@@ -2,9 +2,10 @@ FROM ubuntu:xenial
 
 # RUN apt-get update && apt-get install -y supervisor gcc python-pip python-dev curl lsof net-tools vim-nox strace sudo --no-install-recommends
 RUN apt-get update && apt-get install -y supervisor python-pip python-dev curl lsof net-tools sudo --no-install-recommends
+RUN pip install --upgrade pip
 RUN apt-get install -y gcc autoconf python-setuptools   --no-install-recommends
 
-RUN pip install --upgrade pip
+
 RUN pip install obfsproxy
 
 RUN apt-get install software-properties-common -y --no-install-recommends
